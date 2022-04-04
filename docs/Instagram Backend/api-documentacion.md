@@ -10,7 +10,7 @@ sidebar_position: 1
 
 Post
 * [posts/list?user_id=4](#post-by-given-user-id)
-
+* [list/followers?user_id={user_id}](#followers-from-user)
 
 ___
 ### <a name="post-by-given-user-id"></a>posts/list?user_id=4
@@ -109,3 +109,56 @@ In this example response an Array Collection with two JSONs.
 ```
 
 ___
+
+___
+### <a name="followers-from-user"></a>/list/followers?user_id={user_id}
+* Request : `GET api/v1/list/followers?user_id={user_id}`
+* Parameters : 
+* `{user_id}` It should be a number. Example: 1
+* Response
+* Status : `200` :ok_hand:
+
+
+:information_source: In this example response an array of three JSON followers.
+###
+
+```json
+[
+    {
+        "id": 2,
+        "name": "winnifred.jacobson",
+        "email": "gaetano69@example.com",
+        "email_verified_at": "2022-03-12T01:45:30.000000Z",
+        "created_at": "2022-03-12T01:45:30.000000Z",
+        "updated_at": "2022-03-12T01:45:30.000000Z",
+        "pivot": {
+            "following_id": 1,
+            "follower_id": 2
+        }
+    },
+        {
+        "id": 5,
+        "name": "xemard",
+        "email": "lveum@example.org",
+        "email_verified_at": "2022-03-12T01:45:30.000000Z",
+        "created_at": "2022-03-12T01:45:30.000000Z",
+        "updated_at": "2022-03-12T01:45:30.000000Z",
+        "pivot": {
+            "following_id": 1,
+            "follower_id": 5
+        }
+    },
+        {
+        "id": 9,
+        "name": "ssatterfield",
+        "email": "rippin.justen@example.net",
+        "email_verified_at": "2022-03-12T01:45:30.000000Z",
+        "created_at": "2022-03-12T01:45:30.000000Z",
+        "updated_at": "2022-03-12T01:45:30.000000Z",
+        "pivot": {
+            "following_id": 1,
+            "follower_id": 9
+        }
+    }
+]
+```
