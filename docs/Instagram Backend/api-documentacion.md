@@ -9,11 +9,13 @@ sidebar_position: 1
 ## Lista de rutas
 
 Post
-* [posts/list?user_id=4](#post-by-given-user-id)
-* [list/followers?user_id={user_id}](#followers-from-user)
+* [Post By Given User ID ](#post-by-given-user-id)
 
+User
+* [Register a User](#register-a-user)
+* [Followers Given a User ID](#followers-from-user)
 ___
-### <a name="post-by-given-user-id"></a>posts/list?user_id=4
+### <a name="post-by-given-user-id"></a>Post By Given User ID 
 * Name:  Post By Given User ID 
 * Request : `GET api/v1/posts/list?user_id=4`
 * Response : `PostResource`
@@ -111,7 +113,7 @@ In this example response an Array Collection with two JSONs.
 ___
 
 ___
-### <a name="followers-from-user"></a>/list/followers?user_id={user_id}
+### <a name="followers-from-user"></a>Followers Given a User ID
 * Request : `GET api/v1/list/followers?user_id={user_id}`
 * Parameters : 
 * `{user_id}` It should be a number. Example: 1
@@ -162,3 +164,28 @@ ___
     }
 ]
 ```
+### <a name="register-a-user"></a> Register a User
+* Request : `POST /api/register`
+* Body Form Data : Example 
+
+```json
+    {
+        name: 'NameTextExample',
+        email: 'thisemail@some.com',
+        password: 'password',
+    }
+```
+* Response
+* Status : `200` :ok_hand:
+
+
+:information_source: In this example response a JSON with the token.
+
+
+```json
+{
+    "access_token": "1|nkNBs12q5k5BRi9FPtXLurTH8DZTpZsjZKQHAtKg",
+    "token_type": "Bearer"
+}
+```
+---
