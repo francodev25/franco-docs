@@ -11,6 +11,9 @@ sidebar_position: 1
 Post
 * [Post By Given User ID ](#post-by-given-user-id)
 
+Comment
+* [Comment Show](#comment-show)
+
 User
 * [Register a User](#register-a-user)
 * [Followers Given a User ID](#followers-from-user)
@@ -189,3 +192,25 @@ ___
 }
 ```
 ---
+
+
+### <a name="comment-show"></a> Comment Show
+* Request : `GET api/v1/comments/{comment}`
+* Parameters : 
+* `{comment}` It should be a number. Example: 2
+* Response
+* Status : `200` :ok_hand:
+
+
+:information_source: In this example response an Single JSON.
+
+```json
+{
+    "data": {
+    "id": 2,
+    "userOwner": "mitchell.luz",
+    "body": "Et iusto dignissimos quod et in soluta. Natus nam recusandae repellendus nostrum distinctio est. Occaecati quia exercitationem omnis consequuntur. Quia ullam in accusantium maxime.",
+    "created_at": 1648251320
+    }
+}
+```
