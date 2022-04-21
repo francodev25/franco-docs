@@ -8,6 +8,9 @@ sidebar_position: 1
 
 ## Lista de rutas
 
+Login
+* [Login a User](#login-a-user)
+
 Post
 * [Post By Given User ID ](#post-by-given-user-id)
 
@@ -17,6 +20,33 @@ Comment
 User
 * [Register a User](#register-a-user)
 * [Followers Given a User ID](#followers-from-user)
+
+
+### <a name="login-a-user"></a> login a User
+### Request : `POST /api/login`
+### Body Form Data : Example 
+
+```json
+    {
+        name: 'NameTextExample',
+        email: 'thisemail@some.com',
+        password: 'password',
+    }
+```
+### Response
+### Status : `200` :ok_hand:
+
+
+:information_source: In this example response a JSON with the token.
+###
+
+```json
+{
+    "token": "2|gizfIRW238yqwupwypq963F0HlEjk22i1xDwn3Wn",
+    "message": "Success"
+}
+```
+
 ___
 ### <a name="post-by-given-user-id"></a>Post By Given User ID 
 * Name:  Post By Given User ID 
