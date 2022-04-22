@@ -11,6 +11,9 @@ sidebar_position: 1
 Login
 * [Login a User](#login-a-user)
 
+Register
+* [Register a User](#register-a-user)
+
 Post
 * [Post By Given User ID ](#post-by-given-user-id)
 
@@ -22,10 +25,38 @@ User
 * [Followers Given a User ID](#followers-from-user)
 
 
+___
+### <a name="register-a-user"></a> Register a User
+### Request : `POST /api/register`
+### Body Form Data : Example 
+
+```json
+    {
+        name: 'NameTextExample',
+        email: 'thisemail@some.com',
+        password: 'password',
+    }
+```
+### Response
+### Status : `200` :ok_hand:
+
+
+:information_source: In this example response a JSON with the token.
+###
+
+```json
+{
+    "access_token": "1|nkNBs12q5k5BRi9FPtXLurTH8DZTpZsjZKQHAtKg",
+    "token_type": "Bearer"
+}
+```
+---
+
+
+
 ### <a name="login-a-user"></a> login a User
 ### Request : `POST /api/login`
 ### Body Form Data : Example 
-
 ```json
     {
         name: 'NameTextExample',
@@ -46,7 +77,6 @@ User
     "message": "Success"
 }
 ```
-
 ___
 ### <a name="post-by-given-user-id"></a>Post By Given User ID 
 * Name:  Post By Given User ID 
