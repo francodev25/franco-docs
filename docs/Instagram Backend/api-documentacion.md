@@ -16,6 +16,7 @@ Register
 
 Post
 * [Post By Given User ID ](#post-by-given-user-id)
+* [Post Show By Post ID](#post-show)
 
 Comment
 * [Comment Show](#comment-show)
@@ -173,6 +174,46 @@ In this example response an Array Collection with two JSONs.
 }
 ```
 
+___
+### <a name="post-show"></a> Post Show
+### Request : `GET api/v1/posts/{post}`
+### Parameters : 
+* `{post}` It should be a number. Example: 1
+### Response
+### Status : `200` :ok_hand:
+
+
+:information_source: In this example response an Single JSON.
+
+
+```json
+    {
+    "data": {
+    "id": 1,
+    "userOwner": "xemard",
+    "userImage": "https://i.pravatar.cc/300?img=30",
+    "image": "https://images.unsplash.com/photo-1612611820416-38d7ebaad38f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixlib=rb-1.2.1&q=80&w=400",
+    "likes_count": 1324,
+    "description": "Quae est enim cum quaerat.",
+    "created_at": 1647049530,
+    "comments_count": 2,
+    "comments": [
+    {
+    "id": 1,
+    "userOwner": "dulce48",
+    "body": "Nam illo recusandae explicabo nam sint enim. Perspiciatis maiores sit natus. Ut mollitia voluptate molestias. Quod assumenda veniam fuga debitis. Rerum laborum sed dolores illo voluptatem.",
+    "created_at": 1647049531
+    },
+    {
+    "id": 2,
+    "userOwner": "javier.jacobson",
+    "body": "Velit deleniti veritatis eum voluptas asperiores velit vel qui. Labore ut aut corrupti atque. Vero placeat similique quam quo qui.",
+    "created_at": 1647049531
+    }
+    ]
+    }
+    }
+```
 ___
 
 ___
